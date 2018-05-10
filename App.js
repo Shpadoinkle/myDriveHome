@@ -1,11 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { data } from './src/data/data';
 
 export default class App extends React.Component {
+  state = {
+    list: []
+  };
+
+  componentWillMount() {
+    this.setState({ list: [...data] });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text>Test App.</Text>
       </View>
     );
   }
